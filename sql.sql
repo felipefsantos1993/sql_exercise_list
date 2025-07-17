@@ -1,11 +1,9 @@
 -- Criação do banco de dados
-
 CREATE DATABASE Exercicios
 GO
 USE Exercicios;
 
 -- Criação das tabelas
-
 CREATE TABLE Customers (
     CustomerID INT PRIMARY KEY IDENTITY(1,1),
     CustomerName NVARCHAR(100),
@@ -59,7 +57,6 @@ CREATE TABLE OrderDetails (
 );
 
 -- Relações de chaves estrangeiras
-
 ALTER TABLE Employees
 ADD CONSTRAINT FK_Employees_Departments FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID);
 
@@ -79,7 +76,6 @@ ALTER TABLE OrderDetails
 ADD CONSTRAINT FK_OrderDetails_Products FOREIGN KEY (ProductID) REFERENCES Products(ProductID);
 
 -- Inserção de dados
-
 INSERT INTO Departments (DepartmentName) VALUES
 ('Sales'), ('HR'), ('IT'), ('Marketing');
 
@@ -121,8 +117,7 @@ INSERT INTO OrderDetails (OrderID, ProductID, Quantity, Price) VALUES
 (4, 5, 1, 300.00),
 (4, 3, 4, 150.00);
 
-
-
+-- Exercícios
 Nível Básico (1 a 30)
 
 Selecione todos os clientes da tabela Customers.
@@ -332,4 +327,3 @@ Faça tuning de consultas usando SET STATISTICS IO ON.
 Utilize consultas paralelas e análise de planos de execução.
 
 Crie um exemplo de uso de JSON com T-SQL para armazenar dados semi-estruturados.
-
